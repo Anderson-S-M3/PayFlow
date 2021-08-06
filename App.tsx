@@ -1,21 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StatusBar } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+
+import { AuthProvider } from "./src/contexts/auth";
+import { StorageProvider } from "./src/contexts/storage";
+
+import { fonts } from "./src/fonts";
+import AppLoading from "expo-app-loading";
+
+import Routes from "./src/routes";
+
+import { colors } from "./src/styles/global";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  if (!fonts()) {
+    return <AppLoading />;
+  } else {
+    return (
+      <SafeAreaProvider>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor={colors.brand.primary}
+        />
+        <AuthProvider>
+          <StorageProvider>
+            <Routes />
+          </StorageProvider>
+        </AuthProvider>
+      </SafeAreaProvider>
+    );
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
