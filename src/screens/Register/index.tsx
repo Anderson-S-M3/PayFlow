@@ -89,7 +89,7 @@ export default function Register({ navigation, route }: IRegisterProps) {
   }
 
   function handleRegularCodeBar(text: string) {
-    // Remove Caracter Text
+    // Remove Space Text
     text = text.replace(/\s/g, "");
 
     if (isNaN(Number(text))) {
