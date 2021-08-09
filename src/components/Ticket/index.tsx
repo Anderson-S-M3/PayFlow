@@ -1,13 +1,13 @@
 import React from "react";
 import { Text, View, TouchableOpacity } from "react-native";
 
-import { IDataBaseProps } from "../../@Types/data";
+import { IDatabaseProps } from "../../@Types/data";
 import ModalTicket from "../../Modals/ModalTicket";
 
 import styles from "./styles";
 
 interface ITicketProps {
-  data: IDataBaseProps;
+  data: IDatabaseProps;
 }
 
 export default function Ticket({ data }: ITicketProps) {

@@ -1,17 +1,17 @@
 import React from "react";
 import { createContext } from "react";
 
-import { IDataBaseProps } from "../@Types/data";
+import { IDatabaseProps } from "../@Types/data";
 import {
-  DataBaseCREATE,
-  DataBaseREAD,
-  DataBaseUPDATE,
-  DataBaseDELETE,
+  DatabaseCREATE,
+  DatabaseREAD,
+  DatabaseUPDATE,
+  DatabaseDELETE,
 } from "../services/database";
 
 interface IStorageContext {
-  StorageCREATE(value: IDataBaseProps): void;
-  DATA: [IDataBaseProps] | [];
+  StorageCREATE(value: IDatabaseProps): void;
+  DATA: [IDatabaseProps] | [];
   StorageUPDATE(id: string, pay: boolean): void;
   StorageDELETE(id: string): void;
 }
@@ -19,25 +19,25 @@ interface IStorageContext {
 const StorageContext = createContext<IStorageContext>({} as IStorageContext);
 
 export const StorageProvider: React.FC = ({ children }) => {
-  const [DATA, setDATA] = React.useState<[IDataBaseProps] | []>([]);
+  const [DATA, setDATA] = React.useState<[IDatabaseProps] | []>([]);
   const [Update, setUpdate] = React.useState<boolean>(true);
 
   React.useEffect(() => {
-    DataBaseREAD().then((items) => setDATA(items));
+    DatabaseREAD().then((items) => setDATA(items));
   }, [Update]);
 
-  async function StorageCREATE(value: IDataBaseProps) {
-    await DataBaseCREATE(value);
+  async function StorageCREATE(value: IDatabaseProps) {
+    await DatabaseCREATE(value);
     setUpdate(!Update);
   }
 
   async function StorageUPDATE(id: string, pay: boolean) {
-    await DataBaseUPDATE(id, pay);
+    await DatabaseUPDATE(id, pay);
     setUpdate(!Update);
   }
 
   async function StorageDELETE(id: string) {
-    await DataBaseDELETE(id);
+    await DatabaseDELETE(id);
     setUpdate(!Update);
   }
 

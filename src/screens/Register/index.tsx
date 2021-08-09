@@ -19,7 +19,7 @@ import DueDateSvg from "../../assets/svg/dueDate.svg";
 import ValueSvg from "../../assets/svg/value.svg";
 import CodeSvg from "../../assets/svg/code.svg";
 
-import { IDataBaseProps } from "../../@Types/data";
+import { IDatabaseProps } from "../../@Types/data";
 import { useStorage } from "../../contexts/storage";
 
 import styles from "./styles";
@@ -33,7 +33,7 @@ export default function Register({ navigation, route }: IRegisterProps) {
 
   const code = route?.params?.code;
 
-  const [value, setValue] = React.useState<IDataBaseProps>({
+  const [value, setValue] = React.useState<IDatabaseProps>({
     id: String(new Date().getTime()),
     title: "",
     dueDate: undefined,

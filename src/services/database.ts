@@ -1,14 +1,14 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { IDataBaseProps } from "../@Types/data";
+import { IDatabaseProps } from "../@Types/data";
 
-export async function DataBaseCREATE({
+export async function DatabaseCREATE({
   id,
   title,
   dueDate,
   value,
   code,
   pay,
-}: IDataBaseProps) {
+}: IDatabaseProps) {
   const listItem = {
     id,
     title,
@@ -28,22 +28,22 @@ export async function DataBaseCREATE({
   return await AsyncStorage.setItem("tickets", JSON.stringify(savedItems));
 }
 
-export async function DataBaseREAD(): Promise<[IDataBaseProps] | []> {
+export async function DatabaseREAD(): Promise<[IDatabaseProps] | []> {
   const response = await AsyncStorage.getItem("tickets");
   if (response) return Promise.resolve(JSON.parse(response));
   else return Promise.resolve([]);
 }
 
-export async function DataBaseUPDATE(id: string, pay: boolean) {
-  let savedItems = await DataBaseREAD();
+export async function DatabaseUPDATE(id: string, pay: boolean) {
+  let savedItems = await DatabaseREAD();
   const index = savedItems.findIndex((item) => item.id === id);
   savedItems[index].pay = pay;
 
   return await AsyncStorage.setItem("tickets", JSON.stringify(savedItems));
 }
 
-export async function DataBaseDELETE(id: string) {
-  let savedItems = await DataBaseREAD();
+export async function DatabaseDELETE(id: string) {
+  let savedItems = await DatabaseREAD();
 
   const index = savedItems.findIndex((item) => item.id === id);
   savedItems.splice(index, 1);

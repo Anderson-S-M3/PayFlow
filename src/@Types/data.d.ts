@@ -1,4 +1,4 @@
-export interface IDataBaseProps {
+export interface IDatabaseProps {
   id: string;
   title: string;
   dueDate: Date | undefined;
