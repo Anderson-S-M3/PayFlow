@@ -12,7 +12,7 @@
 <p align="center"><a href="#instalacao">Instalação</a> • <a href="#rodando">Como rodar o App</a> • <a href="#tecnologias">Tecnologias</a></p>
 
 
-<div align="center"><img src="https://user-images.githubusercontent.com/65872811/128709331-efa99fb1-19ab-4c52-aaca-a7eb166a9099.png"></div>
+<div align="center"><a href="https://www.figma.com/file/DRvGcV2F9QeGlRBp0TYhZG/PayFlow-(Copy)?node-id=117%3A981"><img src="https://user-images.githubusercontent.com/65872811/128709331-efa99fb1-19ab-4c52-aaca-a7eb166a9099.png"></a></div>
 
 
 <h2 id="instalacao">Instalação:</h2>
