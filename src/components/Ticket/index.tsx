@@ -19,10 +19,6 @@ export default function Ticket({ data }: ITicketProps) {
     setShowModal(!showModal);
   };
 
-  console.log(date);
-
-  console.log(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
-
   return (
     <>
       <TouchableOpacity
