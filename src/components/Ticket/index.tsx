@@ -19,6 +19,10 @@ export default function Ticket({ data }: ITicketProps) {
     setShowModal(!showModal);
   };
 
+  console.log(date);
+
+  console.log(`${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
+
   return (
     <>
       <TouchableOpacity
@@ -30,7 +34,9 @@ export default function Ticket({ data }: ITicketProps) {
           <Text style={styles.title}>{data.title}</Text>
           <Text style={styles.textDate}>
             Vence em{" "}
-            <Text>{`${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`}</Text>
+            <Text>{`${date.getDate()}/${
+              date.getMonth() + 1
+            }/${date.getFullYear()}`}</Text>
           </Text>
         </View>
 

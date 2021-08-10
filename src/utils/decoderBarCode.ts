@@ -1,7 +1,5 @@
 import { convertCointBRL } from "./convertCoin";
 
-const baseDate = "1997/10/7";
-
 interface IValidadeReturnProps {
   dueDate: Date;
   value: string;
@@ -9,8 +7,10 @@ interface IValidadeReturnProps {
 
 // Scanner
 export function ScannerValidate(code: string): IValidadeReturnProps {
+  const baseDate = "1997/10/6";
+
   const dueDate = new Date(baseDate);
-  dueDate.setDate(dueDate.getDate() + Number(code.substring(4, 8)));
+  dueDate.setDate(dueDate.getDate() + Number(code.substring(5, 9)));
 
   const value = convertCointBRL(code.substring(9, 19));
 
@@ -19,6 +19,8 @@ export function ScannerValidate(code: string): IValidadeReturnProps {
 
 // Digital Line
 export function DigitalLineValidate(code: string): IValidadeReturnProps {
+  const baseDate = "1997/10/6";
+
   const dueDate = new Date(baseDate);
   dueDate.setDate(dueDate.getDate() + Number(code.substring(33, 37)));
 

@@ -116,10 +116,7 @@ export default function Register({ navigation, route }: IRegisterProps) {
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.iconContainer}>
-            <TouchableOpacity
-              activeOpacity={0.6}
-              onPress={() => navigation.goBack()}
-            >
+            <TouchableOpacity activeOpacity={0.6} onPress={handleGoBack}>
               <AntDesign name="arrowleft" size={24} style={styles.icon} />
             </TouchableOpacity>
           </View>
