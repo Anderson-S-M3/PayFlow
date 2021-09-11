@@ -2,7 +2,10 @@
 <a href="https://github.com/Anderson-S-M3/dashBoardCovid">:date: PayFlow :date:</a>
 </h1>
 
-<p align="center">PayFlow foi um projeto proposto pela RocketSeat para ser <br/> desenvolvido na trilha de Flutter durante a <i>"Next Level Week Together"</i> <a href="https://www.figma.com/file/DRvGcV2F9QeGlRBp0TYhZG/PayFlow-(Copy)?node-id=0%3A1">PayFlow - Figma</a></p>
+<p align="center">PayFlow é um projeto desenvolvido pela RocketSeat durante a <i>"Next Level Week Together"</i> na trilha de Flutter <br /> porém, me desafiei a desenvolver em React Native(Expo) <br/>
+  <a href="https://www.figma.com/file/DRvGcV2F9QeGlRBp0TYhZG/PayFlow-(Copy)?node-id=0%3A1">PayFlow - Figma</a></p>
+
+<br />
 
 <p align="center">
 <img alt="Expo" src="https://img.shields.io/badge/-Expo-blue"> <img alt="Version APP" src="https://img.shields.io/badge/Version-1.0.0-green"> <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen"> </p>
@@ -11,9 +14,9 @@
 
 <p align="center"><a href="#instalacao">Instalação</a> • <a href="#rodando">Como rodar o App</a> • <a href="#tecnologias">Tecnologias</a></p>
 
+<br />
 
 <div align="center"><a href="https://www.figma.com/file/DRvGcV2F9QeGlRBp0TYhZG/PayFlow-(Copy)?node-id=117%3A981"><img src="https://user-images.githubusercontent.com/65872811/128709331-efa99fb1-19ab-4c52-aaca-a7eb166a9099.png"></a></div>
-
 
 <h2 id="instalacao">Instalação:</h2>
 <h4>Pré-requisito:</h4>
@@ -67,7 +70,6 @@ que aparecer na URL: http://localhost:19002/ ou no CMD/Terminal
 - Expo-Font
 - Expo-Linear-Gradient
 
-
 <br>
 <br>
 
@@ -76,7 +78,6 @@ que aparecer na URL: http://localhost:19002/ ou no CMD/Terminal
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
-<br>
 <br>
 
 ### Autor
